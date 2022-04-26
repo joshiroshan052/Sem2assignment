@@ -1,15 +1,60 @@
-//1. Using switch statement Write a JAVA program to input marks of five subjects Physics,
-//        Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to
-//        following:
-//        Percentage >= 90% : Grade A
-//        Percentage >= 80% : Grade B
-//        Percentage >= 70% : Grade C
-//        Percentage >= 60% : Grade D
-//        Percentage >= 40% : Grade E
-//        Percentage < 40% : Grade F
-
-//2. JAVA Program to find the maximum between two numbers. Using the switch statement.
 import java.util.Scanner;
+/*Using switch statement Write a JAVA program to input marks of five subjects Physics,
+Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to
+following:
+Percentage >= 90% : Grade A
+Percentage >= 80% : Grade B
+Percentage >= 70% : Grade C
+Percentage >= 60% : Grade D
+Percentage >= 40% : Grade E
+Percentage < 40% : Grade F
+*/
+class FiveSubject{
+    public static void main(String[] args) {
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("please enter the marks of Physics");
+        double phy= scanner.nextDouble();
+        System.out.println("please enter the marks of chemistry");
+        double chem= scanner.nextDouble();
+        System.out.println("please enter the marks of biology");
+        double bio= scanner.nextDouble();
+        System.out.println("please enter the marks of mathematics");
+        double maths= scanner.nextDouble();
+        System.out.println("please enter the marks of computer");
+        double com= scanner.nextDouble();
+        double total_marks= phy+chem+ bio+maths+com;
+        double per=(total_marks*100)/500;
+        int Per=(int) per;
+        switch((Per>=90)?0:(Per<90 && Per>=80)?1:(Per<80 && Per>=70)?2:(Per<70 && Per>=60)?3:(Per<60 && Per >=40)?4:5){
+            case 0:
+                System.out.println("grade A");
+                break;
+            case 1:
+                System.out.println("grade B");
+                break;
+            case 2:
+                System.out.println("grade C");
+                break;
+            case 3:
+                System.out.println("grade D");
+                break;
+            case 4:
+                System.out.println("grade E");
+                break;
+            case 5:
+                System.out.println("grade F");
+                break;
+            default:
+                System.out.println("please enter marks between 0-100 only");
+                break;
+
+        }
+
+    }
+}
+//    JAVA Program to find the maximum between two numbers. Using the switch statement
+
+
 
 class MaxTwo {
     public static void main(String[] args) {
